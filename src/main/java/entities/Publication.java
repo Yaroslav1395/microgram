@@ -5,11 +5,10 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.Objects;
 @Data
-public class Publication {
+public class Publication implements Publishable{
     private String image;
     private String description;
     private String dateTime;
-    private int id = this.hashCode();
 
     public Publication(String image) {
         Objects.requireNonNull(image, "Ссылка на картинку не должна быть пустой");
